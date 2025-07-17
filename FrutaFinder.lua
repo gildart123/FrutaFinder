@@ -43,7 +43,7 @@ local function walkTo(position)
             humanoid.MoveToFinished:Wait()
         end
     else
-        warn("❌ Caminho não encontrado.")
+        warn("Caminho não encontrado.")
     end
 end
 
@@ -51,7 +51,7 @@ end
 local function procurarFruta()
     for _, obj in pairs(game.Workspace:GetDescendants()) do
         if isFruit(obj) and obj:FindFirstChild("Handle") then
-            print("🍍 Fruta encontrada: " .. obj.Name)
+            print("Fruta encontrada: " .. obj.Name)
             walkTo(obj.Handle.Position)
             return
         end
